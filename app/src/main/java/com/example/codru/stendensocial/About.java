@@ -27,6 +27,7 @@ public class About extends AppCompatActivity {
                 "Tim vaneker- Leader\n" +
                 "Smith chen - Co- leader\n" +
                 "Codrut Marin - Programer\n" +
-                "Flavian - Secretary");
+                "Flavian - Secretary\n" +
+                "Ana are mere!");
     }
 }
