@@ -22,11 +22,6 @@
             android:name=".Welcome"
             android:label="@string/title_activity_welcome"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".MessageBoard"
-            android:label="@string/title_activity_message_board"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Discussion" />
         <activity android:name=".About" />
         <activity android:name=".Home1"></activity>
     </application>

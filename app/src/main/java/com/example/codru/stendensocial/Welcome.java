@@ -98,15 +98,13 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
             //mess.putExtra("Username",username);
             //mess.putExtra("StendenMail",StendenMail);
             //startActivity(mess);
-            Messages msgs = new Messages(this);
-            msgs.execute("topic",username,StendenMail);
+
         } else if (id == R.id.About) {
             Intent i = new Intent(Welcome.this,About.class);
             startActivity(i);
         } else if(id == R.id.Chen)
         {
-            Intent i = new Intent(Welcome.this,Discussion.class);
-            startActivity(i);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
