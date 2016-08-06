@@ -126,7 +126,7 @@ public class BackgroundWork extends AsyncTask<String,Void, String> {
         try{
             if(aVoid.equals(a))
             {
-                alertDialog.setMessage("Your username or password doesn't exist!");
+                alertDialog.setMessage("Your username or password aleady exist!");
                 alertDialog.show();
             }else {
                 if(aVoid.equals(c))
