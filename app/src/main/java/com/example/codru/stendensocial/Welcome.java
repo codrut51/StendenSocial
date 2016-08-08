@@ -102,9 +102,12 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
         } else if (id == R.id.About) {
             Intent i = new Intent(Welcome.this,About.class);
             startActivity(i);
-        } else if(id == R.id.Chen)
+        } else if(id == R.id.Books)
         {
-
+           Intent i = new Intent(Welcome.this,Books.class);
+            i.putExtra("UserName",username);
+            i.putExtra("StendenMail",StendenMail);
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

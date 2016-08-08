@@ -23,7 +23,11 @@
             android:label="@string/title_activity_welcome"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".About" />
-        <activity android:name=".Home1"></activity>
+        <activity android:name=".Home1" />
+        <activity android:name=".Books" />
+        <activity android:name=".ListOfBooks" />
+        <activity android:name=".IWannaBuyThis" />
+        <activity android:name=".buyBooks"></activity>
     </application>
 
 </manifest>

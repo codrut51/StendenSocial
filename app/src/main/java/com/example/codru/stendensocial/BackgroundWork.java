@@ -36,7 +36,7 @@ public class BackgroundWork extends AsyncTask<String,Void, String> {
         {
             try{
                 //String login_url = "http://www.bunte-bloecke.de/htdocsit4c/PHP/login.php";
-                String login_url = "http://192.168.43.164/login.php";
+                String login_url = "http://192.168.1.7/login.php";
                 user_name = params[1];
                 String password = params[2];
                 URL url = new URL(login_url);
@@ -73,11 +73,12 @@ public class BackgroundWork extends AsyncTask<String,Void, String> {
         {
             try{
                 //String login_url = "http://www.bunte-bloecke.de/htdocsit4c/PHP/register.php";
-                String login_url = "http://192.168.43.164/register.php";
+                String login_url = "http://192.168.1.7/register.php";
                 String firstN = params[1];
                 String secondN = params[2];
                 String password = params[3];
                 String sMail = params[4];
+                String picture = params[5];
                 URL url = new URL(login_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
@@ -88,7 +89,8 @@ public class BackgroundWork extends AsyncTask<String,Void, String> {
                 String post_data = URLEncoder.encode("firstN","UTF-8")+"="+URLEncoder.encode(firstN,"UTF-8")+"&"
                         +URLEncoder.encode("secondN","UTF-8")+"="+URLEncoder.encode(secondN,"UTF-8")+"&"
                         +URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(password,"UTF-8")+"&"
-                        +URLEncoder.encode("sMail","UTF-8")+"="+URLEncoder.encode(sMail,"UTF-8");
+                        +URLEncoder.encode("sMail","UTF-8")+"="+URLEncoder.encode(sMail,"UTF-8")+"&"
+                        +URLEncoder.encode("Picture","UTF-8")+"="+URLEncoder.encode(picture,"UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();

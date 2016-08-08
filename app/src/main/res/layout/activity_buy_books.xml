@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.codru.stendensocial.buyBooks"
+    android:background="@mipmap/back1">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageS"
+        android:background="@android:color/holo_blue_bright"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Title"
+        android:id="@+id/buyTitle"
+        android:textStyle="bold|italic"
+        android:textSize="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageS"
+        android:layout_toEndOf="@+id/imageS"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#64ffffff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ISBN:"
+        android:id="@+id/buyISBN"
+        android:layout_below="@+id/imageS"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#63ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Condition:"
+        android:id="@+id/buyCOND"
+        android:layout_below="@+id/buyISBN"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:background="#64ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Price:"
+        android:id="@+id/buyPRICE"
+        android:layout_below="@+id/buyCOND"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        android:background="#64ffffff" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="I WANNA BUY THIS"
+        android:id="@+id/buy"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/buyPRICE"
+        android:layout_alignLeft="@+id/buyPRICE"
+        android:layout_alignStart="@+id/buyPRICE"
+        android:onClick="buyBook" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:id="@+id/delete"
+        android:layout_below="@+id/buy"
+        android:layout_centerHorizontal="true"
+        android:onClick="deleteBook" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/Username"
+        android:layout_alignBottom="@+id/imageS"
+        android:layout_alignLeft="@+id/buyTitle"
+        android:layout_alignStart="@+id/buyTitle"
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="10dp"
+        android:background="#63ffffff" />
+
+</RelativeLayout>

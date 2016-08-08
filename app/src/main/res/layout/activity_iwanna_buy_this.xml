@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.codru.stendensocial.IWannaBuyThis"
+    android:background="@mipmap/back3">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@android:id/list"
+        android:layout_above="@+id/button2"
+        android:layout_marginBottom="10dp"
+        android:background="#64ffffff" />
+
+    <EditText
+        android:layout_width="190dp"
+        android:layout_height="35dp"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/message"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Write here..."
+        android:layout_toLeftOf="@+id/button2"
+        android:layout_toStartOf="@+id/button2"
+        android:background="#64ffffff" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:drawable/ic_menu_send"
+        android:backgroundTint="@android:color/background_light"
+        android:onClick="addMessage" />
+
+</RelativeLayout>
