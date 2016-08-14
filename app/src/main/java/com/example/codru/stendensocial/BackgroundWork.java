@@ -36,7 +36,7 @@ public class BackgroundWork extends AsyncTask<String,Void, String> {
         {
             try{
                 //String login_url = "http://www.bunte-bloecke.de/htdocsit4c/PHP/login.php";
-                String login_url = "http://192.168.1.7/login.php";
+                String login_url = "http://192.168.1.2/login.php";
                 user_name = params[1];
                 String password = params[2];
                 URL url = new URL(login_url);
@@ -73,7 +73,7 @@ public class BackgroundWork extends AsyncTask<String,Void, String> {
         {
             try{
                 //String login_url = "http://www.bunte-bloecke.de/htdocsit4c/PHP/register.php";
-                String login_url = "http://192.168.1.7/register.php";
+                String login_url = "http://192.168.1.2/register.php";
                 String firstN = params[1];
                 String secondN = params[2];
                 String password = params[3];

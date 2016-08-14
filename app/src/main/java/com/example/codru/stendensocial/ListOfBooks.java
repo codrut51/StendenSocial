@@ -110,7 +110,7 @@ public class ListOfBooks extends ListActivity {
             protected String doInBackground(String... params) {
 
                 try {
-                    String login_url = "http://192.168.1.7/buyBooks.php";
+                    String login_url = "http://192.168.1.2/buyBooks.php";
                     URL url = new URL(login_url);
                     HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                     httpURLConnection.setRequestMethod("POST");

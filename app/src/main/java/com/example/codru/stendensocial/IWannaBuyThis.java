@@ -53,16 +53,11 @@ public class IWannaBuyThis extends ListActivity {
                 Looper.prepare();
                 while(true)
                 {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            getMessages();
-                        }
-                    });
                     try {
-                        Thread.sleep(100);
+                        Thread.sleep(70);
                     } catch (InterruptedException e) {
                     }
+                    getMessages();
                 }
             }
         });
@@ -92,7 +87,7 @@ public class IWannaBuyThis extends ListActivity {
             protected String doInBackground(String... params) {
 
                 try{
-                    String login_url = "http://192.168.1.7/uploadBookMSG.php";
+                    String login_url = "http://192.168.1.2/uploadBookMSG.php";
                     String StendenMail = params[0];
                     String message = params[1];
                     String username = params[2];
@@ -163,7 +158,7 @@ public class IWannaBuyThis extends ListActivity {
             protected String doInBackground(String... params) {
 
                 try {
-                    String login_url = "http://192.168.1.7/getBookMSG.php";
+                    String login_url = "http://192.168.1.2/getBookMSG.php";
                     URL url = new URL(login_url);
                     HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                     httpURLConnection.setRequestMethod("POST");

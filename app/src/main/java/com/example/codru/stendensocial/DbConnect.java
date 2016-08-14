@@ -30,7 +30,7 @@ public class DbConnect extends AsyncTask<String,Void, String> {
     protected String doInBackground(String... params) {
 
         try{
-            String login_url = "http://192.168.1.7/books.php";
+            String login_url = "http://192.168.1.2/books.php";
             String StendenMail = params[0];
             String bTitle = params[1];
             String bISBN = params[2];

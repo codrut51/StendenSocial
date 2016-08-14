@@ -92,7 +92,7 @@ public class Welcome extends AppCompatActivity implements NavigationView.OnNavig
         if (id == R.id.Home) {
             Intent i = new Intent(Welcome.this,Home1.class);
             startActivity(i);
-            // Handle the camera action
+
         } else if (id == R.id.MessageBoard) {
            // Intent mess = new Intent(Welcome.this,MessageBoard.class);
             //mess.putExtra("Username",username);

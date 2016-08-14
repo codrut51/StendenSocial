@@ -65,7 +65,13 @@ public class buyBooks extends AppCompatActivity {
         bOwner = getIntent().getStringExtra("Owner");
         bOwnerName = getIntent().getStringExtra("OwnerName");
         bUsername.setText(bOwnerName);
-        if(bOwner.equals(StendenMail) || StendenMail.equals("admin")){
+        if(StendenMail.equals(bOwner) || StendenMail.contains(bOwner)){
+            delete.setVisibility(View.VISIBLE);
+            delete.setClickable(true);
+        }
+
+        if(StendenMail.equals("admin"))
+        {
             delete.setVisibility(View.VISIBLE);
             delete.setClickable(true);
         }
@@ -78,6 +84,7 @@ public class buyBooks extends AppCompatActivity {
         buyisbn.setText(s);
         buycondition.setText(buycondition.getText().toString() + bCondition);
         buyprice.setText(buyprice.getText().toString() + bPrice);
+
     }
 
     public void buyBook(View v){
@@ -102,7 +109,7 @@ public class buyBooks extends AppCompatActivity {
             protected String doInBackground(String... params) {
 
                 try{
-                    String login_url = "http://192.168.1.7/deleteBookMSG.php";
+                    String login_url = "http://192.168.1.2/deleteBookMSG.php";
                     URL url = new URL(login_url);
                     HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                     httpURLConnection.setRequestMethod("POST");
@@ -179,7 +186,7 @@ public class buyBooks extends AppCompatActivity {
             @Override
             protected Bitmap doInBackground(String... params) {
                 String id = params[0];
-                String add = "http://192.168.1.7/getBooks.php?id="+id;
+                String add = "http://192.168.1.2/getBooks.php?id="+id;
                 URL url = null;
                 String result = null;
                 Bitmap image = null;
